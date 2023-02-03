@@ -3,5 +3,5 @@ def wsgi_application(environ, start_response):
     headers = [('Content-Type', 'text/plain')]
     start_response(status, headers )
 
-    body = environ['QUERY_STRING'].lstrip('/?').split('&')
+    body = [bytes(i + '\n', 'ascii') for i in environ['QUERY_STRING'].split('&')]
     return body
