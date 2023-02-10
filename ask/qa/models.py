@@ -23,7 +23,7 @@ author - автор ответа
 В качестве модели пользователя - используйте django.contrib.auth.models.User  из стандартной системы авторизации Django.
 """
 class Question(models.Model):
-	# objects = QuestionManager()
+	objects = QuestionManager()
 	title = models.CharField(max_length=255)
 	text = models.TextField()
 	added_at = models.DateTimeField(auto_now_add=True)
