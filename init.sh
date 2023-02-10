@@ -3,7 +3,7 @@
 # sudo /etc/init.d/nginx restart
 
 sudo /etc/init.d/mysql start
-sudo mysql -uroot -e "create database web;"
+sudo mysql -uroot -e "create database stepic_web;"
 sudo mysql -uroot -e "create user 'box'@'localhost' identified by '1234';"
 sudo mysql -uroot -e "grant all privileges on stepic_web.* to 'box'@'localhost' with grant option;"
 
