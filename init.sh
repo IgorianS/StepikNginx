@@ -9,4 +9,4 @@ sudo mysql -uroot -e "grant all privileges on stepic_web.* to 'box'@'localhost' 
 
 cd ~/web/ask
 sudo python3 manage.py makemigrations qa
-sudo python3 manage.py migrate
+sudo python3 manage.py migrate qa
